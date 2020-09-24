@@ -1,5 +1,5 @@
 module ApplicationHelper
-  def full_title(page_title = '')
+  def full_title(page_title = '') # rubocop:disable all
     base_title = "BIGBAG Store"
     if page_title.empty?
       base_title
