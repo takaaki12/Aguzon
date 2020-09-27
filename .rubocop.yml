@@ -15,3 +15,6 @@ AllCops:
     - 'path/ruby'
     - 'spec/requests/potepan/products_request_spec.rb'
     - 'spec/spec_helper.rb'
+
+Airbnb/OptArgParameters:
+  Enabled: false
