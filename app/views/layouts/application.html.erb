@@ -9,8 +9,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>BIGBAG Store</title>
-
     <!-- PLUGINS CSS STYLE -->
 
     <!-- GOOGLE FONT -->
@@ -31,6 +29,8 @@
       <%= render 'layouts/header' %>
       <%= yield %>
       <%= render 'layouts/footer' %>
+      <%= render 'layouts/login_modal' %>
+      <%= render 'layouts/signup_modal' %>
     </div>
     <%= javascript_include_tag 'application' %>
   </body>
