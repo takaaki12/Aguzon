@@ -46,11 +46,11 @@ RSpec.describe "Potepan::Products", type: :request do
         get potepan_product_path product.id
         expect(response.body).to include("#{product.name} - #{BASE_TITLE}")
       end
-    end
+  end
 
-    context 'productが存在しない場合' do
-      subject { -> { get potepan_product_path 1 } }
+  context 'productが存在しない場合' do
+    subject { -> { get potepan_product_path 1 } }
 
-      it { is_expected.to raise_error ActiveRecord::RecordNotFound }
-    end
+    it { is_expected.to raise_error ActiveRecord::RecordNotFound }
+  end
 end
