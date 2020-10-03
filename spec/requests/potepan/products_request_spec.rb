@@ -1,18 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe "Potepan::Products", type: :request do
-  describe 'GET #index' do
-    it '/potepanリクエストでtitleが表示されること' do
-      get potepan_path
-      expect(response.body).to include("#{BASE_TITLE}")
-    end
-
-    it '/potepan/indexリクエストでtitleが表示されること' do
-      get potepan_index_path
-      expect(response.body).to include("#{BASE_TITLE}")
-    end
-  end
-
   describe 'GET #show' do
     let!(:product) { create(:product) }
 
