@@ -11,21 +11,15 @@ RSpec.describe "Potepan::Products", type: :request do
     end
 
     it 'product名が表示されていること' do
-      expect(response.body).to include product.name.to_s
+      expect(response.body).to include product.name
     end
 
     it 'productの値段が表示されていること' do
       expect(response.body).to include product.display_price.to_s
     end
 
-    it 'productの画像が表示されていること' do
-      product.images.each do |image|
-        expect(response.body).to include product.image
-      end
-    end
-
     it 'productの説明文が表示されていること' do
-      expect(response.body).to include product.description.to_s
+      expect(response.body).to include product.description
     end
 
     it 'productのtitleが表示されていること' do
