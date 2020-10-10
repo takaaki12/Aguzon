@@ -1,6 +1,6 @@
 <% provide(:title, @product.name) %>
 <!-- MAIN CONTENT SECTION -->
-<%= render partial: "products_header", locals: {product: @product} %>
+<%= render partial: "layouts/contents_header", locals: {contents: @product} %>
 <section class="mainContent clearfix">
   <div class="container">
     <div class="row singleProduct">
@@ -28,7 +28,11 @@
           </div>
           <div class="media-body">
             <ul class="list-inline">
-              <li><a href="product_grid_left_sidebar.html"><i class="fa fa-reply" aria-hidden="true"></i>一覧ページへ戻る</a></li>
+              <li><a href="product_grid_left_sidebar.html">
+                <i class="fa fa-reply" aria-hidden="true"></i>
+                <%= link_to "一覧ページへ戻る", potepan_category_path(@product.taxons.first.id) %>
+                </a>
+              </li>
               <!-- <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i>Share This</a></li> -->
             </ul>
             <h2><%= @product.name %></h2>
