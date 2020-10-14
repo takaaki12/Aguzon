@@ -43,6 +43,6 @@ RSpec.feature "Categories", type: :feature do
   end
 
   scenario "別カテゴリの商品が表示されていないことを確認する。" do
-    expect(page).to_not have_content other_product.name
+    expect(page).not_to have_content other_product.name
   end
 end
