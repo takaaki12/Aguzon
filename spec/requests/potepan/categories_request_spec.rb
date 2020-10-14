@@ -19,7 +19,7 @@ RSpec.describe "Potepan::Categories", type: :request do
       expect(response.body).to include product.display_price.to_s
     end
 
-    it 'productのtitleが表示されていること' do
+    it 'categoryのtitleが表示されていること' do
       expect(response.body).to include("#{taxon.name} - #{BASE_TITLE}")
     end
   end
