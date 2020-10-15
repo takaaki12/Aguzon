@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature "Products", type: :feature do
-  let!(:taxon) { create(:taxon) }
+  let(:taxon) { create(:taxon) }
   let(:product) { create(:product, taxons: [taxon], price: 123) }
 
   background do
