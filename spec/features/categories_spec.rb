@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.feature "Categories", type: :feature do
   let!(:taxonomy) { create(:taxonomy, name: 'test_taxonomy') }
-  let!(:taxon) { create(:taxon, name: 'test_taxon', parent: taxonomy.root) }
+  let(:taxon) { create(:taxon, name: 'test_taxon', parent: taxonomy.root) }
   let!(:product) { create(:product, taxons: [taxon]) }
   let!(:other_taxonomy) { create(:taxonomy, name: 'test_other_taxonomy') }
   let!(:other_taxon) { create(:taxon, name: 'test_ohter_taxon', parent: other_taxonomy.root) }

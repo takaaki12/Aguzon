@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "Potepan::Categories", type: :request do
   describe 'GET #show' do
-    let!(:taxon) { create(:taxon) }
+    let(:taxon) { create(:taxon) }
     let!(:product) { create(:product, taxons: [taxon]) }
 
     before { get potepan_category_path taxon.id }

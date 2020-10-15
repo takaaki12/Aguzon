@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.feature "Products", type: :feature do
   let!(:taxon) { create(:taxon) }
-  let!(:product) { create(:product, taxons: [taxon], price: 123) }
+  let(:product) { create(:product, taxons: [taxon], price: 123) }
 
   background do
     visit potepan_product_path(product.id)
