@@ -27,13 +27,15 @@
             </div>
           </div>
           <div class="media-body">
-            <ul class="list-inline">
-              <li><a href="product_grid_left_sidebar.html">
-                <i class="fa fa-reply" aria-hidden="true"></i>
-                <%= link_to "一覧ページへ戻る", potepan_category_path(@product.taxons.first.id) %>
-                </a>
-              </li>
-            </ul>
+            <% if @product.taxons.any? %>
+              <ul class="list-inline">
+                <li><a href="product_grid_left_sidebar.html">
+                  <i class="fa fa-reply" aria-hidden="true"></i>
+                  <%= link_to "一覧ページへ戻る", potepan_category_path(@product.taxons.first.id) %>
+                  </a>
+                </li>
+              </ul>
+            <% end %>
             <h2><%= @product.name %></h2>
             <h3><%= @product.display_price %></h3>
             <p><%= @product.description %></p>
