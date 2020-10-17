@@ -1,6 +1,6 @@
 <% provide(:title, @product.name) %>
 <!-- MAIN CONTENT SECTION -->
-<%= render partial: "layouts/content_header", locals: {content: @product} %>
+<%= render partial: "layouts/content_header", locals: {content_name: @product.name} %>
 <section class="mainContent clearfix">
   <div class="container">
     <div class="row singleProduct">
