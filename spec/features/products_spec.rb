@@ -8,7 +8,7 @@ RSpec.feature "Products", type: :feature do
     visit potepan_product_path(product.id)
   end
 
-  scenario "商品詳細にアクセスできることを確認。" do
+  scenario "プロダクトページにアクセスしたら、その商品の詳細情報が表示される" do
     within('.media-body') do
       expect(page).to have_title product.name
       expect(page).to have_content product.name
@@ -17,7 +17,7 @@ RSpec.feature "Products", type: :feature do
     end
   end
 
-  scenario "商品詳細からカテゴリへアクセス出来ることを確認。" do
+  scenario "「一覧ページに戻る」をクリックしたら、その商品のカテゴリページが表示される" do
     click_on '一覧ページへ戻る'
     expect(page).to have_title taxon.name
     expect(page).to have_content product.name

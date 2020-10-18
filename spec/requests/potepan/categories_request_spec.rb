@@ -7,7 +7,7 @@ RSpec.describe "Potepan::Categories", type: :request do
 
     before { get potepan_category_path taxon.id }
 
-    it 'リクエストが成功することを確認' do
+    it 'リクエストが成功すること' do
       expect(response.status).to eq 200
     end
 

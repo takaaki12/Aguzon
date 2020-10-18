@@ -12,7 +12,7 @@ RSpec.feature "Categories", type: :feature do
     visit potepan_category_path(taxon.id)
   end
 
-  scenario "商品カテゴリの表示を確認する。" do
+  scenario "カテゴリページにアクセスしたら、そのカテゴリの商品の情報が表示される" do
     expect(page).to have_title taxon.name
     expect(page).to have_content product.name
     within('.side-nav') do
@@ -27,22 +27,22 @@ RSpec.feature "Categories", type: :feature do
     end
   end
 
-  scenario "商品カテゴリの画面間の移動を確認する。" do
+  scenario "別カテゴリをクリックしたら、その商品カテゴリへアクセスする" do
     click_on other_taxon.name
     expect(current_path).to eq potepan_category_path(other_taxon.id)
   end
 
-  scenario "商品カテゴリ名から商品詳細ページへの移動を確認する。" do
+  scenario "商品名をクリックしたら、その商品詳細ページにアクセスする" do
     click_on product.name
     expect(current_path).to eq potepan_product_path(product.id)
   end
 
-  scenario "商品カテゴリ価格表示から商品詳細ページへの移動を確認する。" do
+  scenario "商品価格をクリックしたら、その商品詳細ページにアクセスする" do
     click_on product.display_price.to_s
     expect(current_path).to eq potepan_product_path(product.id)
   end
 
-  scenario "別カテゴリの商品が表示されていないことを確認する。" do
+  scenario "カテゴリページにアクセスしたら、別カテゴリの商品は表示されていない" do
     expect(page).not_to have_content other_product.name
   end
 end
