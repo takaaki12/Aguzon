@@ -1,37 +1,29 @@
 require 'rails_helper'
 
-RSpec.describe 'ProductDecorator_model', type: :model do
-  let(:category) { create(:taxonomy, name: "Category") }
-  let!(:taxon) { create(:taxon, name: "Taxon", taxonomy: category, parent: category.root) }
-  let!(:product) { create(:product, taxons: [taxon], name: "Product") }
+RSpec.describe 'ProductDecorator', type: :model do
+  let!(:taxon) { create(:taxon) }
+  let!(:other_taxon) { create(:taxon) }
+  let!(:another_taxon) { create(:taxon) }
+  let!(:product) { create(:product, taxons: [taxon, other_taxon]) }
+  let!(:first_other_product) { create(:product, taxons: [taxon]) }
+  let!(:second_other_product) { create(:product, taxons: [other_taxon]) }
+  let!(:another_product) { create(:product, taxons: [another_taxon]) }
 
-  describe "related_products" do
+  describe '#related_products' do
     let!(:related_products_scope) do
       Spree::Product.related_products(product)
     end
 
-    context "There are 3 related products" do
-      let!(:related_products) do
-        3.times.collect do |i|
-          create(:product, taxons: [taxon])
-        end
-      end
-
-      it "Will only get 3 products" do
-        expect(related_products_scope.size).to eq 3
-      end
+    it '同じカテゴリの商品のみ返す' do
+      expect(related_products_scope).to match_array [first_other_product, second_other_product]
     end
 
-    context "There are 4 related products" do
-      let!(:related_products) do
-        4.times.collect do |i|
-          create(:product, taxons: [taxon])
-        end
-      end
+    it 'product自身は含まれていない' do
+      expect(related_products_scope).not_to include(product)
+    end
 
-      it "Will get 4 products" do
-        expect(related_products_scope.size).to eq 4
-      end
+    it 'another_productは含まれていない' do
+      expect(related_products_scope).not_to include(another_product)
     end
   end
 end
