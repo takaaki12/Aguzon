@@ -35,12 +35,8 @@ RSpec.describe "Potepan::Products", type: :request do
     end
 
     context 'productがTaxonsを持つとき' do
-      it 'related_product名が表示されていること' do
-        expect(response.body).to include related_products.first.name
-      end
-
-      it 'related_productの値段が表示されていること' do
-        expect(response.body).to include related_products.first.display_price.to_s
+      it 'related_productが5つ以上あるとき、表示数は4であること' do
+        expect(related_products.count).to eq 4
       end
     end
   end
