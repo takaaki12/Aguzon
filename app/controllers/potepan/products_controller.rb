@@ -1,6 +1,4 @@
 class Potepan::ProductsController < ApplicationController
-  DISPLAY_RELATED_PRODUCTS_NUMBER = 4
-
   def show
     @product = Spree::Product.find(params[:id])
     @images  = @product.images
