@@ -29,7 +29,7 @@ RSpec.describe "Potepan::Products", type: :request do
     end
 
     context 'productがTaxonsを持つとき' do
-      it 'related_productが5つ以上あるときでも、表示数は4であること' do
+      it 'related_productが5件以上あるときでも、@related_productsへの格納数は4件であること' do
         expect(controller.instance_variable_get("@related_products").length).to eq 4
       end
     end
