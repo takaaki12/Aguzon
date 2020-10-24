@@ -17,13 +17,5 @@ RSpec.describe 'ProductDecorator', type: :model do
     it '同じカテゴリの商品のみ返す' do
       expect(related_products_scope).to match_array [first_other_product, second_other_product]
     end
-
-    it 'product自身は含まれていない' do
-      expect(related_products_scope).not_to include(product)
-    end
-
-    it 'another_productは含まれていない' do
-      expect(related_products_scope).not_to include(another_product)
-    end
   end
 end
