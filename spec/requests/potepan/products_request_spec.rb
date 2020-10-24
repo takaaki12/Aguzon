@@ -4,13 +4,7 @@ RSpec.describe "Potepan::Products", type: :request do
   describe 'GET #show' do
     let(:taxon) { create(:taxon) }
     let(:product) { create(:product, taxons: [taxon]) }
-    let!(:related_products) do
-      4.times.collect do |i|
-        create(:product, name: "related_product_#{i}",
-                         price: "#{rand(1.0..99.9).round(2)}",
-                         taxons: [taxon])
-      end
-    end
+    let!(:related_products) { create_list(:product, 5, taxons: [taxon]) }
 
     before { get potepan_product_path product.id }
 
@@ -35,8 +29,8 @@ RSpec.describe "Potepan::Products", type: :request do
     end
 
     context 'productがTaxonsを持つとき' do
-      it 'related_productが5つ以上あるとき、表示数は4であること' do
-        expect(related_products.count).to eq 4
+      it 'related_productが5つ以上あるときでも、表示数は4であること' do
+        expect(controller.instance_variable_get("@related_products").length).to eq 4
       end
     end
   end
