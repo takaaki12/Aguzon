@@ -4,7 +4,7 @@
       <h4>関連商品</h4>
     </div>
   </div>
-  <% related_products.each do | related_product | %>
+  <% related_products.each do |related_product| %>
     <div class="col-md-3 col-sm-6 col-xs-12">
       <%= link_to potepan_product_path(related_product.id) do %>
         <div class="productBox">
@@ -15,7 +15,7 @@
           <% end %>
           <div class="productCaption clearfix">
             <h5><%= related_product.name %></h5>
-            <h3><%= related_product.display_price.to_s %></h3>
+            <h3><%= related_product.display_price %></h3>
           </div>
         </div>
       <% end %>
