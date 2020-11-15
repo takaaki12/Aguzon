@@ -1,4 +1,4 @@
-class Potepan::ProductsController < ApplicationController
+class Aguzon::ProductsController < ApplicationController
   def show
     @product = Spree::Product.find(params[:id])
     @images  = @product.images

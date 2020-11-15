@@ -1,4 +1,4 @@
-class Potepan::CategoriesController < ApplicationController
+class Aguzon::CategoriesController < ApplicationController
   def show
     @taxonomies = Spree::Taxonomy.all.includes(:taxons)
     @taxon = Spree::Taxon.find(params[:id])

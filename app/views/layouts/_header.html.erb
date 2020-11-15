@@ -6,14 +6,15 @@
       <div class="row">
         <div class="col-md-6 hidden-sm hidden-xs">
           <ul class="list-inline">
-            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter" style="color: #1da1f2;"></i></a></li>
+            <li><a href="#"><i class="fa fa-facebook-square" style="color: royalblue;"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram" style="color: #e1306c;"></i></a></li>
           </ul>
         </div>
         <div class="col-md-6 col-xs-12">
           <ul class="list-inline pull-right">
             <li class="dropdown searchBox">
-              <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search"></i></a>
+              <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search" style="color: #1da1f2;"></i></a>
               <ul class="dropdown-menu dropdown-menu-right">
                 <form  id="form01" action="product-grid-left-sidebar.html" method="post">
                   <li>
@@ -26,7 +27,9 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a href="cart-page.html" class="dropdown-toggle" data-toggle="dropdown disabled"><i class="fa fa-shopping-cart"></i></a>
+              <%= link_to aguzon_cart_page_path do %>
+                <i class="fa fa-shopping-cart"></i>
+              <% end %>
             </li>
           </ul>
         </div>
@@ -43,11 +46,12 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html"><%= image_tag("img/logo.png", :alt => "") %></a>
+        <a class="navbar-brand"><%= link_to image_tag("img/aguzon_logo.png"), aguzon_path %></a>
       </div>
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Home", potepan_path %></li>
+          <li><%= link_to "ホーム", aguzon_path %></li>
+          <li><%= link_to "AGUZONとは", aguzon_about_us_path %></li>
           <li class="dropdown megaDropMenu active">
             <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true" aria-expanded="false">Shop</a>
             <ul class="dropdown-menu row">
@@ -86,6 +90,8 @@
               </li>
             </ul>
           </li>
+          <!--link_toにすればレイアウトのズレが解消される-->
+          <li>ログイン</li>
         </ul>
       </div>
     </div>

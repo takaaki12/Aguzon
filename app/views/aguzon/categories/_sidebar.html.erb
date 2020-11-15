@@ -12,7 +12,7 @@
               <ul id="category-<%= taxonomy.id %>" class="collapse collapseItem">
                 <% taxonomy.root.leaves.each do |taxon| %>
                   <li>
-                    <%= link_to potepan_category_path(taxon.id) do %>
+                    <%= link_to aguzon_category_path(taxon.id) do %>
                       <i class="fa fa-caret-right" aria-hidden="true"></i><%= taxon.name %>
                       <span>(<%= taxon.products.count %>)</span>
                     <% end %>

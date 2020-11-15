@@ -15,11 +15,11 @@ services:
       - default
     ports:
       - '36379:6379'
-  potepanec:
+  aguzon:
     build:
       context: .
       dockerfile: Dockerfile.ci
-    container_name: potepanec_app
+    container_name: aguzon_app
     ports:
       - '3000:3000'
     environment:

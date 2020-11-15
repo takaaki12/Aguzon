@@ -1,4 +1,4 @@
-class Potepan::SampleController < ApplicationController
+class Aguzon::SampleController < ApplicationController
   def index
   end
 

@@ -44,7 +44,7 @@ RUN apt-get update                                                              
   && mv ~/chromedriver /usr/bin/chromedriver                                                                                            \
   && apt-get clean
 
-RUN mkdir /potepanec
-WORKDIR /potepanec
-COPY . /potepanec
+RUN mkdir /aguzon
+WORKDIR /aguzon
+COPY . /aguzon
 RUN bundle install

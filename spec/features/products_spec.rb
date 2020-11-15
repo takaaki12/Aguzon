@@ -6,7 +6,7 @@ RSpec.feature "Products", type: :feature do
   let!(:related_product) { create(:product, taxons: [taxon], price: 111) }
 
   background do
-    visit potepan_product_path(product.id)
+    visit aguzon_product_path(product.id)
   end
 
   scenario "プロダクトページにアクセスしたら、その商品の詳細情報が表示される" do

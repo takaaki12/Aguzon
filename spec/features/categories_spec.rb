@@ -9,7 +9,7 @@ RSpec.feature "Categories", type: :feature do
   let!(:other_product) { create(:product, name: 'test_other_product', taxons: [other_taxon]) }
 
   background do
-    visit potepan_category_path(taxon.id)
+    visit aguzon_category_path(taxon.id)
   end
 
   scenario "カテゴリページにアクセスしたら、そのカテゴリの商品の情報が表示される" do
@@ -29,17 +29,17 @@ RSpec.feature "Categories", type: :feature do
 
   scenario "別カテゴリをクリックしたら、その商品カテゴリへアクセスする" do
     click_on other_taxon.name
-    expect(current_path).to eq potepan_category_path(other_taxon.id)
+    expect(current_path).to eq aguzon_category_path(other_taxon.id)
   end
 
   scenario "商品名をクリックしたら、その商品詳細ページにアクセスする" do
     click_on product.name
-    expect(current_path).to eq potepan_product_path(product.id)
+    expect(current_path).to eq aguzon_product_path(product.id)
   end
 
   scenario "商品価格をクリックしたら、その商品詳細ページにアクセスする" do
     click_on product.display_price.to_s
-    expect(current_path).to eq potepan_product_path(product.id)
+    expect(current_path).to eq aguzon_product_path(product.id)
   end
 
   scenario "カテゴリページにアクセスしたら、別カテゴリの商品は表示されていない" do

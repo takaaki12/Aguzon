@@ -1,12 +1,12 @@
 require 'rails_helper'
 
-RSpec.describe "Potepan::Products", type: :request do
+RSpec.describe "Aguzon::Products", type: :request do
   describe 'GET #show' do
     let(:taxon) { create(:taxon) }
     let(:product) { create(:product, taxons: [taxon]) }
     let!(:related_products) { create_list(:product, 5, taxons: [taxon]) }
 
-    before { get potepan_product_path product.id }
+    before { get aguzon_product_path product.id }
 
     it 'リクエストが成功すること' do
       expect(response.status).to eq 200
