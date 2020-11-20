@@ -3839,7 +3839,7 @@ body.bodyColor.container {
 }
 
 .darkSection {
-  background-image: url("../img/about-us/store-bg.jpg");
+  background-image: asset_url("img/about-us/store-bg.jpg");
   background-attachment: fixed;
   width: 100%;
   -webkit-background-size: cover;
