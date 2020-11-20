@@ -201,7 +201,7 @@ a:hover, a:focus {
   display: block;
   min-height: 35px;
   height: auto;
-  background-color: #e0ffe0;
+  background-color: #ffc489;
 }
 .topBar ul li a {
   padding: 0 3px;
@@ -455,6 +455,7 @@ a:hover, a:focus {
 }
 .navbar-default.navbar-fixed-top .navbar-header .navbar-brand {
   margin-top: 0;
+
 }
 @media (min-width: 480px) {
   .navbar-default.navbar-fixed-top .navbar-header .navbar-brand {
@@ -533,6 +534,7 @@ a:hover, a:focus {
 .navbar-default .navbar-header .navbar-brand {
   display: inline-block;
 }
+
 @media (min-width: 480px) {
   .navbar-default .navbar-header .navbar-brand {
     padding: 0 15px;
@@ -942,7 +944,7 @@ body.bodyColor.container {
   margin-bottom: 10px;
 }
 .footer .newsletter p {
-  color: #acacac;
+  color: #ffff;
 }
 .footer .newsletter .input-group {
   display: block;
@@ -1057,11 +1059,11 @@ body.bodyColor.container {
   display: block;
   width: 100%;
   min-height: 53px;
-  background-color: #e0ffe0;
-  border-top: 8px solid #47bac1;
+  background-color: #ffc489;
+  border-top: 8px solid #ff8914;
 }
 .copyRight p {
-  color: #acacac;
+  color: #ffffff;
   margin-bottom: 0;
 }
 @media (max-width: 479px) {
@@ -1389,6 +1391,11 @@ body.bodyColor.container {
 .page-header h4 {
   margin-bottom: 0;
   text-transform: uppercase;
+}
+
+.feature-collection-image {
+  height: 350px;
+  object-fit: cover;
 }
 
 .masking-hover, .imageBox .productImage .productMasking, .whiteSection .featuredProducts .slide .productImage .productMasking, .mainContent .featuredProducts .slide .productImage .productMasking, .productsContent .productBox .productImage .productMasking, .whiteSection .featuredCollection .thumbnail .imageWrapper .masking, .mainContent .featuredCollection .thumbnail .imageWrapper .masking, .productListSingle .media .media-left .maskingImage {
@@ -3817,7 +3824,7 @@ body.bodyColor.container {
   }
 }
 
-.darkSection h3, .aboutPeople h3, .setp5 .thanksContent h3 {
+.darkSection h3, .darkSection h4, .aboutPeople h3, .setp5 .thanksContent h3 {
   color: #ffffff;
   text-transform: capitalize;
   font-weight: 400;
@@ -3914,8 +3921,9 @@ body.bodyColor.container {
   color: #252525;
 }
 .aboutPeople .thumbnail img {
-  width: 100%;
-  height: auto;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
 }
 .aboutPeople .thumbnail .caption {
   padding-top: 18px;

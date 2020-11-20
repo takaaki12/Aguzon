@@ -10,4 +10,7 @@ class Aguzon::HomeController < ApplicationController
 
   def cart_page
   end
+
+  def product_grid_left_sidebar
+  end
 end

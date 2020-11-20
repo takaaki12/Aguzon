@@ -13,8 +13,9 @@
         </div>
         <div class="col-md-6 col-xs-12">
           <ul class="list-inline pull-right">
+            <li><span><a data-toggle="modal" href='#login'>ログイン</a><small>or</small><a data-toggle="modal" href='#signup'>新規登録</a></span></li>
             <li class="dropdown searchBox">
-              <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search" style="color: #1da1f2;"></i></a>
+              <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search" style="color: #ff8914;"></i></a>
               <ul class="dropdown-menu dropdown-menu-right">
                 <form  id="form01" action="product-grid-left-sidebar.html" method="post">
                   <li>
@@ -28,7 +29,7 @@
             </li>
             <li class="dropdown">
               <%= link_to aguzon_cart_page_path do %>
-                <i class="fa fa-shopping-cart"></i>
+                <i class="fa fa-shopping-cart" style="color: #ffc489;"></i>
               <% end %>
             </li>
           </ul>
@@ -46,12 +47,14 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand"><%= link_to image_tag("img/aguzon_logo.png"), aguzon_path %></a>
+        <%= link_to aguzon_path do %>
+          <span class="navbar-brand"><%= image_tag("img/oku_daira.png", :alt => "") %></span>
+        <% end %>
       </div>
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to "ホーム", aguzon_path %></li>
-          <li><%= link_to "AGUZONとは", aguzon_about_us_path %></li>
+          <li><%= link_to "『おくだいら』とは", aguzon_about_us_path %></li>
           <li class="dropdown megaDropMenu active">
             <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true" aria-expanded="false">Shop</a>
             <ul class="dropdown-menu row">
@@ -90,8 +93,6 @@
               </li>
             </ul>
           </li>
-          <!--link_toにすればレイアウトのズレが解消される-->
-          <li>ログイン</li>
         </ul>
       </div>
     </div>

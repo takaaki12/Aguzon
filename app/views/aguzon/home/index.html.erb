@@ -4,7 +4,7 @@
     <div class="fullscreenbanner">
       <ul>
         <li>
-          <%= image_tag("home/banner-slider/aguzon_home_7.jpg", :alt => "slidebg1", data:{bgposition: "center center", bgfit: "cover" , bgrepeat: "no-repeat"}) %>
+          <%= image_tag("home/banner-slider/ina_agrivalley.png", :alt => "slidebg1", data:{bgposition: "center center", bgfit: "cover" , bgrepeat: "no-repeat"}) %>
         </li>
       </ul>
     </div>
@@ -16,5 +16,6 @@
   <div class="container">
     <%= render "serch_by_classification" %>
     <%= render "new_products", new_products: @new_products %>
+    <%= render "new_micropost", new_products: @new_products %>
   </div>
 </section>

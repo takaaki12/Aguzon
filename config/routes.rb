@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     get '/',                        to: 'home#index'
     get 'index',                    to: 'home#index'
     get 'about_us',                 to: 'home#about_us'
-    get :product_grid_left_sidebar, to: 'sample#product_grid_left_sidebar'
+    get 'product_grid_left_sidebar', to: 'home#product_grid_left_sidebar'
     get :product_list_left_sidebar, to: 'sample#product_list_left_sidebar'
     get :single_product,            to: 'sample#single_product'
     get :cart_page,                 to: 'home#cart_page'
