@@ -1,18 +1,16 @@
 <% provide(:title, @taxon.name) %>
 <%= render partial: "layouts/content_header", locals: {content_name: @taxon.name} %>
-<!-- MAIN CONTENT SECTION -->
 <section class="mainContent clearfix productsContent">
   <div class="container">
     <div class="row">
       <%= render partial: "sidebar", locals: {taxonomies: @taxonomies} %>
       <div class="col-md-9 col-sm-8 col-xs-12">
-        <%= render partial: "grid_filterarea", locals: {taxon: @taxon} %>
+        <%= render partial: "list_filterarea", locals: {taxon: @taxon} %>
         <div class="row">
-          <%= render partial: "grid_products", collection: @products, as: "product" %>
+          <%= render partial: "list_products", collection: @products, as: "product" %>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- LIGHT SECTION -->
 <%= render partial: "lightsection" %>

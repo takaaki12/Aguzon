@@ -1,0 +1,23 @@
+<div class="row filterArea">
+  <div class="col-xs-6">
+    <div class="dropdown">
+      <button type="button" id="dropdown1"
+       class="btn btn-secondary dropdown-toggle"
+       data-toggle="dropdown"
+       aria-haspopup="true"
+       aria-expanded="false">
+       並び替え
+      </button>
+      <ul class="dropdown-menu">
+        <li class="dropdown-item"><%= link_to "新着順", aguzon_category_path(taxon.id, sort: "NEW_PRODUCT"), class: 'dropdown-toggle' %></li>
+        <li class="dropdown-item"><%= link_to "古い順", aguzon_category_path(taxon.id, sort: "OLD_PRODUCT"), class: 'dropdown-toggle' %></li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-xs-6">
+    <div class="btn-group pull-right" role="group">
+      <button type="button" class="btn btn-default active"><i class="fa fa-th" aria-hidden="true"></i><span><%= link_to "GRID", aguzon_category_path(taxon.id) %></span></button>
+      <button type="button" class="btn btn-default"><i class="fa fa-th-list" aria-hidden="true"></i><span><%= link_to "LIST", aguzon_product_list_left_sidebar_path(id: taxon.id) %></span></button>
+    </div>
+  </div>
+</div>

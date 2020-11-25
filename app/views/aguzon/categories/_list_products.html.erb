@@ -1,0 +1,18 @@
+<div class="row productListSingle">
+  <div class="col-xs-12">
+    <%= link_to aguzon_product_path(product.id) do %>
+    <div class="media">
+      <% if product.images.any? %>
+        <div class="media-left">
+          <%= image_tag product.display_image.attachment(:large), :class => "media-object", :alt => "Image" %>
+        </div>
+      <% end %>
+      <div class="media-body">
+        <h4 class="media-heading"><%= product.name %></h4>
+        <p><%= product.description %></p>
+        <h3><%= product.display_price %></h3>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

@@ -20,4 +20,3 @@
 //= require plugins/selectbox/jquery.selectbox-0.1.3.min
 //= require plugins/countdown/jquery.syotimer
 //= require js/custom
-//= require_self

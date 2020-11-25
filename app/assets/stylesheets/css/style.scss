@@ -2303,8 +2303,8 @@ body.bodyColor.container {
   background-size: cover;
   background-position: center center;
   height: auto;
-  height: 200px;
-  background-image: url(../img/products/page-header-image.jpg);
+  height: 300px;
+  background-image: asset_url("img/products/syuukaku.png");
 }
 .pageHeaderImage .tableBlock {
   display: table;
@@ -2646,6 +2646,14 @@ body.bodyColor.container {
 
 .filterArea {
   margin-bottom: 30px;
+}
+.dropdown-item {
+  height: 35px;
+  padding: 0;
+  line-height: 35px;
+  border-radius: 0;
+  margin: 0 0 0 5px;
+  color: #252525;
 }
 .filterArea .btn-group .btn-default {
   height: 35px;
