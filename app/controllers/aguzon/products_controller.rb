@@ -1,4 +1,6 @@
-class Aguzon::ProductsController < ApplicationController
+class Aguzon::ProductsController < Aguzon::StoreController
+  layout 'application'
+
   def show
     @product = Spree::Product.find(params[:id])
     @images  = @product.images

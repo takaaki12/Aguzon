@@ -55,7 +55,7 @@
               </select>
             </span>
             <div class="btn-area">
-              <a href="cart_page.html" class="btn btn-primary btn-block">カートへ入れる<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+              <%= render partial: "cart_form", locals: { product: @product } %>
             </div>
           </div>
         </div>

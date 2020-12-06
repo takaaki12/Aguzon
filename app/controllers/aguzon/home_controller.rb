@@ -7,7 +7,4 @@ class Aguzon::HomeController < ApplicationController
 
   def about_us
   end
-
-  def cart_page
-  end
 end

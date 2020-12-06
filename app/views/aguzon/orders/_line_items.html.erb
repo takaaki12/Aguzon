@@ -1,0 +1,30 @@
+<!--元のやつ-->
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>商品名</th>
+        <th>価格</th>
+        <th>数</th>
+        <th>小計</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @order.line_items.each do |line_item| %>
+      <% cart_item = line_item.variant.product %>
+        <tr>
+          <td class="col-xs-2">
+            <% if line_item.variant.product.images.any? %>
+              <span class="cartImage"><%= image_tag(line_item.variant.product.display_image.attachment(:small), alt: "#{line_item.variant.product.name}-img") %></span>
+            <% end %>
+          </td>
+          <td class="col-xs-4"><%= cart_item.name %></td>
+          <td class="col-xs-2"><%= cart_item.display_price %></td>
+          <td class="col-xs-2"><%= line_item.quantity %></td>
+          <td class="col-xs-2"><%= line_item.display_amount %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
