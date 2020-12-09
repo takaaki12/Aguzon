@@ -1,0 +1,34 @@
+<% provide(:title, '新規登録') %>
+
+<section class="lightSection clearfix SignuppageHeaderImage">
+  <div class="container">
+    <div class="tableBlock">
+      <div class="row tableInner">
+        <div class="col-xs-12">
+          <div class="page-title">
+            <h2> - SIGNUP - </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="form">
+  <ul>
+    <%= form_with url: aguzon_users_path, local: true do |f| %>
+      <%= render partial: "aguzon/shared/error_messages", locals: {user: @user} %>
+
+      <li><%= f.label :email, class: "email-label" %></li>
+      <li><%= f.email_field :email, class: "email-form" %></li>
+
+      <li><%= f.label :password, class: "password-label" %></li>
+      <li><%= f.password_field :password, class: "password-form"%></li>
+
+      <li><%= f.label :password_confirmation, "password confirmation", class: "password-label" %></li>
+      <li><%= f.password_field :password_confirmation, class: "password-form" %></li>
+
+      <li><%= f.submit "Create my account", class: "btn btn-primary create-my-acount" %></li>
+    <% end %>
+  </ul>
+</div>

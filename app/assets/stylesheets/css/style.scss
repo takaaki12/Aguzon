@@ -186,6 +186,7 @@ a:hover, a:focus {
 }
 
 /*================= 2. HOME ==================*/
+
 /*=== 2.1 HEADER ===*/
 .header {
   background-color: #ffffff;
@@ -4865,4 +4866,83 @@ body.bodyColor.container {
     border: 1px solid #cfcfcf;
     background: #fff;
     background: rgba(255, 255, 255, 0.6);
+}
+
+/*=== 15. User ===*/
+/*=== USER SIGNUP PAGE HEADER ===*/
+.SignuppageHeaderImage {
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  height: auto;
+  height: 360px;
+  background-image: asset_url("img/user/signup.jpg");
+}
+
+.SignuppageHeaderImage .tableBlock {
+  display: table;
+  height: 200px;
+  width: 100%;
+}
+.SignuppageHeaderImage .tableBlock .tableInner {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  height: 73px;
+}
+.SignuppageHeaderImage .tableBlock .tableInner .page-title h2 {
+  color: #252A35;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.SignuppageHeaderImage .tableBlock .tableInner .page-title .breadcrumb {
+  background-color: transparent;
+  margin-bottom: 0;
+  padding: 0;
+}
+.SignuppageHeaderImage .tableBlock .tableInner .page-title .breadcrumb li {
+  text-transform: uppercase;
+  color: #e6e6e6;
+}
+.email-label {
+  font-size: 15px;
+  color: #252525;
+  margin-top: 100px;
+}
+.password-label {
+  font-size: 15px;
+  color: #252525;
+}
+.email-form {
+  font-size: 15px;
+  width: 300px;
+  height: 35px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  padding: 7px 10px;
+}
+.password-form {
+  font-size: 15px;
+  width: 300px;
+  height: 35px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  padding: 7px 10px;
+}
+.create-my-acount {
+  width: 300px;
+  margin-top: 5px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+.form {
+  text-align: center;
+}
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
 }
