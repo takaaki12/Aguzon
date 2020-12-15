@@ -4,6 +4,7 @@ class Aguzon::UsersController < Aguzon::StoreController
   def create
     @user = Spree::User.new(user_params)
     if @user.save
+      log_in @user
 
       if current_order
         session[:guest_token] = nil
@@ -16,10 +17,10 @@ class Aguzon::UsersController < Aguzon::StoreController
     end
   end
 
-  # def show
-    # @orders = @user.orders.complete.order('completed_at desc')
-    # redirect_to aguzon_cart_path
-  # end
+# def show
+  # @orders = @user.orders.complete.order('completed_at desc')
+  # redirect_to aguzon_cart_path
+# end
 
   def new
     @user = Spree::User.new
@@ -29,22 +30,22 @@ class Aguzon::UsersController < Aguzon::StoreController
     @user = Spree::User.find(params[:id])
   end
 
-  # def update
-    # if @user.update(user_params)
-      # if params[:user][:password].present?
-        # this logic needed b/c devise wants to log us out after password changes
-        # Spree.user_class.reset_password_by_token(params[:user])
-        # if Spree::Auth::Config[:signout_after_password_change]
-          # sign_in(@user, event: :authentication)
-        # else
-          # bypass_sign_in(@user)
-        # end
+# def update
+  # if @user.update(user_params)
+    # if params[:user][:password].present?
+      # this logic needed b/c devise wants to log us out after password changes
+      # Spree.user_class.reset_password_by_token(params[:user])
+      # if Spree::Auth::Config[:signout_after_password_change]
+        # sign_in(@user, event: :authentication)
+      # else
+        # bypass_sign_in(@user)
       # end
-      # redirect_to spree.account_url, notice: Spree.t(:account_updated)
-    # else
-      #render :edit
     # end
+    # redirect_to spree.account_url, notice: Spree.t(:account_updated)
+  # else
+    #render :edit
   # end
+# end
 
   private
 
