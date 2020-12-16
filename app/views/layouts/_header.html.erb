@@ -25,14 +25,10 @@
             <li class="dropdown searchBox">
               <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search" style="color: #ff8914;"></i></a>
               <ul class="dropdown-menu dropdown-menu-right">
-                <form  id="form01" action="product-grid-left-sidebar.html" method="post">
-                  <li>
-                    <span class="input-group">
-                      <input type="text" name="searchWord" class="form-control" placeholder="Search…" aria-describedby="basic-addon2">
-                      <span onclick="FormSubmit();" class="input-group-addon addPointer" id="basic-addon2">検索</span>
-                    </span>
-                  </li>
-                </form>
+                <%= form_tag(aguzon_searches_path, method: :get) do %>
+                  <%= text_field_tag :search, "", placeholder: "何かお探しですか？" %>
+                  <%= submit_tag "search", :name => nil %>
+                <% end %>
               </ul>
             </li>
             <li class="dropdown">

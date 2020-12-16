@@ -24,6 +24,7 @@ Rails.application.routes.draw do
     get :blog_single_right_sidebar, to: 'sample#blog_single_right_sidebar'
     get :tokushoho,                 to: 'sample#tokushoho'
     get :privacy_policy,            to: 'sample#privacy_policy'
+    get 'searches',                   to: 'searches#index'
     get    :login,                  to: 'user_sessions#new'
     post   :login,                  to: 'user_sessions#create'
     delete :logout,                 to: 'user_sessions#destroy'
