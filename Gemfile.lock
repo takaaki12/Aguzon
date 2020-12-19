@@ -1,4 +1,14 @@
 GIT
+  remote: https://github.com/DigitalReflow/solidus-blogging.git
+  revision: 4a160afaa51fe4f97c174fab49202ed3c33e47dc
+  specs:
+    solidus_blogging (1.1.0)
+      acts-as-taggable-on
+      deface (~> 1)
+      solidus (> 1.0)
+      solidus_auth_devise
+
+GIT
   remote: https://github.com/solidusio-contrib/solidus_i18n.git
   revision: 9ebc3509a51823c0ebbc40894525335ddaedd62a
   branch: master
@@ -56,6 +66,8 @@ GEM
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    acts-as-taggable-on (6.5.0)
+      activerecord (>= 5.0, < 6.1)
     acts_as_list (0.9.19)
       activerecord (>= 3.0)
     addressable (2.7.0)
@@ -460,6 +472,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   solidus (~> 2.9.0)
   solidus_auth_devise
+  solidus_blogging!
   solidus_i18n!
   spring
   spring-watcher-listen (~> 2.0.0)
