@@ -3615,11 +3615,8 @@ body.bodyColor.container {
 .blogPage .thumbnail .caption .list-inline li:nth-child(2) a {
   background-color: #0084b4;
 }
-.blogPage .thumbnail .caption .list-inline li:nth-child(3) a {
-  background-color: #c73b6f;
-}
 .blogPage .thumbnail .caption .list-inline li:last-child a {
-  background-color: #36465d;
+  background-color: #d93177;
 }
 .blogPage .thumbnail .pager {
   background-color: #f0f0f0;
@@ -4948,4 +4945,13 @@ body.bodyColor.container {
     color: red;
     margin: 0 0 30px 0;
   }
+}
+/*=== 15. BlogEntry ===*/
+.blog-published {
+  margin-top: 5px;
+}
+.blog-title {
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }

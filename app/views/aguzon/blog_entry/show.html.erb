@@ -1,0 +1,57 @@
+<% provide(:title, "SINGLE_BLOG") %>
+<%= render "light_section" %>
+<!-- MAIN CONTENT SECTION -->
+<section class="mainContent clearfix blogPage singleBlog">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 col-sm-8 col-xs-12">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="thumbnail">
+              <%= image_tag(@entry.blog_entry_image.attachment(:large), :alt => "blog-image") %>
+              <div class="caption">
+                <div class="row">
+                  <div class="col-md-3 col-md-push-9 col-sm-4 col-sm-push-8 col-xs-12">
+                    <h5>詳細-Details-</h5>
+                    <ul class="list-unstyled">
+                      <li><i class="fa fa-user" aria-hidden="true"></i>Takaaki Komatsu</li>
+                      <li><i class="fa fa-calendar" aria-hidden="true"></i><%= @entry.published_at %></li>
+                    </ul>
+                    <h5>Share</h5>
+                    <ul class="list-inline">
+                      <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                      <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                      <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    </ul>
+                  </div>
+                  <div class="col-md-9 col-md-pull-3 col-sm-8 col-sm-pull-4 col-xs-12">
+                    <h3><%= @entry.title %></h3>
+                    <p><%= @entry.body %></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-ms-4 col-xs-12 sideBar">
+        <div class="panel panel-default recentBlogPosts">
+          <div class="panel-heading">recent posts</div>
+          <div class="panel-body">
+            <% @entries.each do |entry| %>
+              <%= link_to aguzon_blog_entry_path(entry.id) do %>
+                <div class="media">
+                  <%= image_tag entry.blog_entry_image.attachment(:mini) %>
+                </div>
+                <div class="media-body">
+                  <h4 class="media-heading"><%= entry.title %></h4>
+                  <p><i class="fa fa-calendar" aria-hidden="true"></i><%= entry.published_at %></p>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

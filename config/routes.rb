@@ -32,6 +32,7 @@ Rails.application.routes.draw do
     resources :categories, only: :show
     resources :home, only: :index
     resources :users
+    resources :blog_entry, only: [:index, :show]
 
     get '/orders/populate', to: 'orders#populate_redirect'
     get '/orders/:id/token/:token' => 'orders#show', as: :token_order

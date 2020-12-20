@@ -1,0 +1,25 @@
+<div id="new_entry" class="row featuredProducts">
+  <div class="col-xs-12">
+    <div class="page-header">
+      <h4>おくだいらからの新着情報♪♪</h4>
+    </div>
+  </div>
+  <div class="col-xs-12">
+    <div class="owl-carousel featuredProductsSlider">
+      <% entries.each do |entry| %>
+        <%= link_to aguzon_blog_entry_path(entry.id) do %>
+          <ul>
+            <li>
+              <div class="productImage clearfix">
+                <%= image_tag entry.blog_entry_image.attachment(:large) %>
+              </div>
+            </li>
+            <li class="blog-published"><%= entry.published_at %></li>
+            <li><h4 class="blog-title"><%= entry.title %></h4></li>
+            <li><%= entry.entry_summary(char=70) %></li>
+          </ul>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
