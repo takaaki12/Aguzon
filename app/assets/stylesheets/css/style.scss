@@ -202,7 +202,7 @@ a:hover, a:focus {
   display: block;
   min-height: 35px;
   height: auto;
-  background-color: #ffc489;
+  background-color: #eeeeee;
 }
 .topBar ul li a {
   padding: 0 3px;
@@ -214,7 +214,7 @@ a:hover, a:focus {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  color: #ffffff !important;
+  color: #222222 !important;
 }
 .topBar ul li a:hover, .topBar ul li a:focus {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$value)";
@@ -1060,11 +1060,11 @@ body.bodyColor.container {
   display: block;
   width: 100%;
   min-height: 53px;
-  background-color: #ffc489;
-  border-top: 8px solid #ff8914;
+  background-color: #eeeeee;
+  border-top: 8px solid #bbbbbb;
 }
 .copyRight p {
-  color: #ffffff;
+  color: #222222;
   margin-bottom: 0;
 }
 @media (max-width: 479px) {
@@ -3559,6 +3559,7 @@ body.bodyColor.container {
 .blogPage .thumbnail .caption .list-inline li {
   padding: 0 5px 0 0;
   float: left;
+  color: #222222;
 }
 .blogPage .thumbnail .caption .list-inline li a {
   text-align: center;
