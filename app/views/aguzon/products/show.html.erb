@@ -29,10 +29,9 @@
           <div class="media-body">
             <% if @product.taxons.any? %>
               <ul class="list-inline">
-                <li><a href="product_grid_left_sidebar.html">
+                <li>
                   <i class="fa fa-reply" aria-hidden="true"></i>
                   <%= link_to "一覧ページへ戻る", aguzon_category_path(@product.taxons.first.id) %>
-                  </a>
                 </li>
               </ul>
             <% end %>

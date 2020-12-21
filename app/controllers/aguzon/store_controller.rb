@@ -19,8 +19,8 @@ class Aguzon::StoreController < Aguzon::BaseController
 
   def lock_order
     Spree::OrderMutex.with_lock!(@order) { yield }
-  rescue Spree::OrderMutex::LockFailed
-    flash[:error] = t('spree.order_mutex_error')
-    redirect_to spree.cart_path
+    rescue Spree::OrderMutex::LockFailed
+      flash[:error] = t('spree.order_mutex_error')
+      redirect_to spree.cart_path
   end
 end

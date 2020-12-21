@@ -12,5 +12,5 @@ Spree::Product.class_eval do
   def self.search(search)
     return Spree::Product.all unless search
       Spree::Product.where(['name LIKE ? OR meta_description LIKE ? OR meta_keywords LIKE ?', "%#{search}%", "%#{search}%", "%#{search}%"])
-    end
+  end
 end
