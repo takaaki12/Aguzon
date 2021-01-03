@@ -47,7 +47,7 @@ class Aguzon::OrdersController < Aguzon::StoreController
     associate_user
     if params[:id] && @order.number != params[:id]
       flash[:error] = t('spree.cannot_edit_orders')
-      redirect_to aguzon_cart_link_path
+      redirect_to aguzon_path
     end
   end
 

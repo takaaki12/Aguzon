@@ -28,11 +28,8 @@
     <% if @product.price_for(current_pricing_options) and !@product.price.nil? %>
       <div data-hook="product_price" class="columns five <%= !@product.has_variants? ? 'alpha' : 'omega' %>">
         <div id="product-price">
-          <h6 class="product-section-title"><%= t('spree.price') %></h6>
+          <h4>数量</h6>
           <div>
-            <span class="price selling" itemprop="price" content="<%= @product.price_for(current_pricing_options).to_d %>">
-              <%= @product.display_price %>
-            </span>
             <span itemprop="priceCurrency" content="<%= current_pricing_options.currency %>"></span>
           </div>
           <% if @product.master.can_supply? %>
@@ -42,10 +39,10 @@
             <span class="out-of-stock"><%= t('spree.out_of_stock') %></span>
           <% end %>
         </div>
-        <div class="add-to-cart">
-          <%= number_field_tag :quantity, 1, class: 'title', min: 1 %>
-          <%= button_tag class: 'large primary', id: 'add-to-cart-button', type: :submit do %>
-            <%= t('spree.add_to_cart') %>
+        <div class="resizeWidth">
+          <%= number_field_tag :quantity, 1, class: "form-control", min: 1 %>
+          <%= button_tag class: 'btn btn-primary btn-block', type: :submit do %>
+            <span><i class="fa fa-angle-right" aria-hidden="true"></i>カートへ入れる</span>
           <% end %>
         </div>
       </div>

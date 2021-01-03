@@ -2024,8 +2024,10 @@ body.bodyColor.container {
   color: #797979;
   margin-bottom: 37px;
 }
-.quick-view .modal-dialog .modal-content .modal-body .media .media-body .quick-drop, .singleProduct .media .media-body .quick-drop {
-  margin: 0 12px 38px 0;
+.quick-view .modal-dialog .modal-content .modal-body .media .media-body .form-control, .singleProduct .media .media-body .form-control{
+  width: 196px;
+  height: 55px;
+  margin: 0 18px 38px 0;
   display: inline-block;
 }
 .quick-view .modal-dialog .modal-content .modal-body .media .media-body .btn-area, .singleProduct .media .media-body .btn-area {
