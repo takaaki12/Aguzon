@@ -14,14 +14,17 @@
 </section>
 <div class="form">
   <ul>
-    <%= form_with :as => :spree_user, url: aguzon_login_path, local: true do |f| %>
+  　<%= form_for Spree::User.new, as: :spree_user, url: spree.create_new_session_path do |f| %>
       <li><%= f.label :email, class: "email-label" %></li>
       <li><%= f.email_field :email, class: "email-form" %></li>
 
       <li><%= f.label :password, class: "password-label" %></li>
       <li><%= f.password_field :password, class: "password-form"%></li>
 
-      <li><%= f.submit "Login my account", class: "btn btn-primary create-my-acount" %></li>
+      <li><%= f.check_box :remember_me, tabindex: 3 %></li>
+      <li><%= f.label :remember_me, "ログインしたままにする" %></li>
+
+      <li><%= f.submit "Login", class: "btn btn-primary create-my-acount" %></li>
     <% end %>
     <p class="new-user">新しいユーザー? <%= link_to "アカウント登録NOW!", new_aguzon_user_path %></p>
   </ul>

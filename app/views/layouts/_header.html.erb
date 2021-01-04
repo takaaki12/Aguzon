@@ -17,9 +17,9 @@
               <span>
                 <%= link_to "新規登録", new_aguzon_user_path %>
                 <small>or</small>
-                <%= link_to "ログイン", aguzon_login_path %>
+                <%= link_to "ログイン", new_aguzon_user_session_path %>
                 <small>or</small>
-                <%= link_to "ログアウト", aguzon_logout_path, method: :delete %>
+                <%= link_to "ログアウト", spree.logout_path, method: :delete %>
               </span>
             </li>
             <li class="dropdown searchBox">

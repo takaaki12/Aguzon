@@ -16,13 +16,11 @@ Rails.application.routes.draw do
     get 'about_us',                 to: 'home#about_us'
     get 'product_list_left_sidebar', to: 'categories#product_list_left_sidebar'
     get 'searches',                 to: 'searches#index'
-    get    :login,                  to: 'user_sessions#new'
-    post   :login,                  to: 'user_sessions#create'
-    delete :logout,                 to: 'user_sessions#destroy'
     resources :products, only: :show
     resources :categories, only: :show
     resources :home, only: :index
-    resources :users
+    resources :users, only: :new
+    resources :user_sessions, only: :new
     resources :blog_entry, only: [:index, :show]
 
     get '/orders/populate', to: 'orders#populate_redirect'
