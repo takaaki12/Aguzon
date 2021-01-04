@@ -32,4 +32,11 @@ RSpec.describe "Aguzon::Homes", type: :request do
       expect(controller.instance_variable_get("@new_products").length).to eq 8
     end
   end
+
+  describe 'GET #about_us' do
+    it 'リクエストが成功すること' do
+      get aguzon_about_us_path
+      expect(response.status).to eq 200
+    end
+  end
 end
