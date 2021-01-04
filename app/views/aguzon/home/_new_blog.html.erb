@@ -14,8 +14,8 @@
                 <%= image_tag entry.blog_entry_image.attachment(:large) %>
               </div>
             </li>
-            <li class="blog-published"><%= entry.published_at %></li>
             <li><h4 class="blog-title"><%= entry.title %></h4></li>
+            <li class="blog-published"><%= entry.display_date %></li>
             <li><%= entry.entry_summary(char=70) %></li>
           </ul>
         <% end %>

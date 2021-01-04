@@ -17,7 +17,7 @@
                         <h5>詳細-Details-</h5>
                         <ul class="list-unstyled">
                           <li><i class="fa fa-user" aria-hidden="true"></i>Takaaki Komatsu</li>
-                          <li><i class="fa fa-calendar" aria-hidden="true"></i><%= entry.published_at %></li>
+                          <li><i class="fa fa-calendar" aria-hidden="true"></i><%= entry.display_date %></li>
                         </ul>
                       </div>
                       <div class="col-md-9 col-md-pull-2 col-sm-8 col-sm-pull-4 col-xs-12">
@@ -43,7 +43,7 @@
                 </div>
                 <div class="media-body">
                   <h4 class="media-heading"><%= entry.title %></h4>
-                  <p><i class="fa fa-calendar" aria-hidden="true"></i><%= entry.published_at %></p>
+                  <p><i class="fa fa-calendar" aria-hidden="true"></i><%= entry.display_date %></p>
                 </div>
               <% end %>
             <% end %>
