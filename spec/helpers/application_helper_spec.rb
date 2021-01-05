@@ -4,7 +4,7 @@ RSpec.describe ApplicationHelper, type: :helper do
   describe '#full_title' do
     context "引数が与えられなかった時" do
       it "ベースとなるタイトル文字列だけを返す" do
-        expect(full_title).to eq 'AGUZON Store'
+        expect(full_title).to eq 'OKUDAIRA'
       end
     end
 
