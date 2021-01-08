@@ -5,7 +5,6 @@ Spree.config do |config|
   # Core:
 
   # Default currency for new sites
-  # config.currency = "USD"
   config.currency = "JPY"
 
   # from address for transactional emails
