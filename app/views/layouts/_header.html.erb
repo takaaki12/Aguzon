@@ -14,13 +14,13 @@
         <div class="col-md-6 col-xs-12">
           <ul class="list-inline pull-right">
             <li>
-              <span>
+              <% if spree_current_user %>
+                <%= link_to "ログアウト", spree.logout_path, method: :delete %>
+              <% else %>
                 <%= link_to "新規登録", new_aguzon_user_path %>
                 <small>or</small>
                 <%= link_to "ログイン", new_aguzon_user_session_path %>
-                <small>or</small>
-                <%= link_to "ログアウト", spree.logout_path, method: :delete %>
-              </span>
+              <% end %>
             </li>
             <li class="dropdown searchBox">
               <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search" style="color: #ff8914;"></i></a>
