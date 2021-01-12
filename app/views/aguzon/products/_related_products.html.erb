@@ -10,7 +10,7 @@
         <div class="productBox">
           <% if related_product.images.any? %>
             <div class="productImage clearfix">
-              <%= image_tag(related_product.display_image.attachment(:small), alt: "#{related_product.name}-img") %>
+              <%= image_tag(related_product.display_image.attachment(:large), alt: "#{related_product.name}-img") %>
             </div>
           <% end %>
           <div class="productCaption clearfix">
