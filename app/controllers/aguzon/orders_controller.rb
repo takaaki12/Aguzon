@@ -14,11 +14,6 @@ class Aguzon::OrdersController < Aguzon::StoreController
   before_action :apply_coupon_code, only: :update
   skip_before_action :verify_authenticity_token, only: [:populate]
 
-  def show
-    @order = Spree::Order.find_by!(number: params[:id])
-    authorize! :show, @order, cookies.signed[:guest_token]
-  end
-
   def update
     authorize! :update, @order, cookies.signed[:guest_token]
     if @order.contents.update_cart(order_params)
