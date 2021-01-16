@@ -22,7 +22,7 @@
               <div class="col-sm-4 col-sm-offset-8 col-xs-12">
                 <ul class="list-unstyled">
                   <li>小計<span><%= @order.display_item_total %></span></li>
-                  <li>消費税<span><%= @order.display_additional_tax_total %></span></li>
+                  <%= render "adjustments.html.erb", order: @order %>
                   <li>総計<span class="grandTotal"><%= @order.display_total %></span></li>
                 </ul>
               </div>

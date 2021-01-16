@@ -1,0 +1,8 @@
+<% order.all_adjustments.tax.eligible.group_by(&:label).each do |label, adjustments| %>
+  <% if adjustments.sum(&:amount) != 0 %>
+    <li class="adjustment">
+    <%= t('spree.tax') %>: <%= label %>
+    <span><%= Spree::Money.new(adjustments.sum(&:amount), currency: order.currency) %></span>
+    </li>
+  <% end %>
+<% end %>
