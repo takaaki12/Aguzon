@@ -16,6 +16,8 @@ Rails.application.routes.draw do
     get 'about_us',                 to: 'home#about_us'
     get 'product_list_left_sidebar', to: 'categories#product_list_left_sidebar'
     get 'searches',                 to: 'searches#index'
+    post 'guest_session',           to: 'guest_sessions#guest_session'
+    delete 'logout',                to: 'guest_sessions#destroy'
     resources :products, only: :show
     resources :categories, only: :show
     resources :home, only: :index
