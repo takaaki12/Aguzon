@@ -14,7 +14,7 @@
 </section>
 <div class="form">
   <ul>
-  　<%= form_for Spree::User.new, as: :spree_user, url: spree.create_new_session_path do |f| %>
+  　<%= form_for Spree::User.new, as: :spree_user, url: aguzon_user_sessions_path do |f| %>
       <li><%= f.label :email, class: "email-label" %></li>
       <li><%= f.email_field :email, class: "email-form" %></li>
 
