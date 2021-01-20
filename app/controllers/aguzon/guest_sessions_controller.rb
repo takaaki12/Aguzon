@@ -7,10 +7,4 @@ class Aguzon::GuestSessionsController < ApplicationController
     flash[:success] = 'ゲストユーザーでログインしました! よろしくお願いします〜♪♪'
     redirect_to aguzon_path
   end
-
-  def destroy
-    sign_out
-    flash[:success] = 'ありがとうございました！　またのお越しをお待ちしております♪♪'
-    redirect_to aguzon_path
-  end
 end
