@@ -82,7 +82,8 @@ Git GitHub Rubocop CircleCI
 ３、一部はスクールでの本課題となりますが、その際のプルリクエストで２度同じことを指摘されないように意識したことと、しっかりとコメントに対して感謝の気持ちを伝えていったこと！  
 
 ## 使い方のお願い
-１、Session周りについてはsolidus_auth_deviseを用いております。しかし、signup,login.logoutの際にokudairaにredirectする実装ができておりません。お手数ですが、  
+１、ゲストログイン機能がございますので、お使いください！
+２、Signup周りについてはsolidus_auth_deviseを用いております。しかし、signupの際にokudairaにredirectする実装ができておりません。お手数ですが、  
 https://okudaira.herokuapp.com/aguzon  
-のように「aguzon」ディレクトリにアクセスしてください。「カートへ入れる機能」はアカウントに紐づけられていますので、loginすると使えるようになります。  
-２、支払い機能までは実装しておりません。  
+のように「aguzon」ディレクトリにアクセスしてください。
+3、支払い機能までは実装しておりません。  
